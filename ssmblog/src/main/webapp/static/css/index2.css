@@ -1,0 +1,13 @@
+li:hover {
+    background-color: #BEBEBE;
+}
+.carousel{
+    height: 300px;
+}
+.carousel .item{
+    height: 300px;
+
+}
+.carousel img{
+    width: 100%;
+}

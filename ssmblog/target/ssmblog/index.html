@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="UTF-8">
+	<title>博客</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/css/index2.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/front/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class=home-template style="background: #ebebeb">
+	<!-- 导航条 -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container">
+
+	    <!-- 页面缩显示 -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <!-- logo -->
+	      <a class="navbar-brand" href="#">姜飞祥博客</a>
+	    </div>
+
+	    <!-- 导航标签 -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+            <li class=""><a href="/admin/getAllBlog">首页</a></li>
+            <li><a href="#">简述</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">特点 <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		             <li><a href="#tab-chrome">Chrome</a></li>
+		              <li><a href="#tab-firefox">Firefox</a></li>
+		              <li><a href="#tab-safari">Safari</a></li>
+		              <li><a href="#tab-opera">Opera</a></li>
+		              <li><a href="#tab-ie">IE</a></li>
+		          </ul>
+		        </li>
+            <li><a href="#">关于</a></li>        
+	      </ul>
+	    </div><!-- 导航标签结束-->
+	  </div>
+	</nav><!-- 导航条 -->	
+
+	<!-- carousel轮播图 -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- 设置图片轮播的顺序 -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	  </ol>
+
+	  <!-- 设置轮播图片 -->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img src="images/chrome-big.jpg" alt="...">
+	      <div class="carousel-caption">
+	        <h1>Chrome</h1>
+              <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="" role="button" target="_blank">点击下载</a>
+              </p>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/firefox-big.jpg" alt="...">
+	      <div class="carousel-caption">
+	        <h1>Firefox</h1>
+              <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="" role="button" target="_blank">点击下载</a>
+              </p>
+
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/ie-big.jpg" alt="...">
+	      <div class="carousel-caption">
+	        <h1>IE</h1>
+              <p>Internet Explorer，简称 IE，是微软公司推出的一款网页浏览器。</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="" role="button" target="_blank">点击下载</a>
+              </p>
+
+	      </div>
+	    </div>
+	  </div>
+
+	  <!-- 设置轮播图片控制器 -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+	<!-- 首页内容 -->
+    <section class=content-wrap>
+        <div class=container>
+            <div class=row>
+                <main class="col-md-8 main-content">
+                    <article class=post id="blogshow_list">
+
+                        <!--<div class=post-head>
+                            <h1 class=post-title><a href="" class="title_href">加载标题中</a></h1>
+                            <div class=post-meta><span class=author>作者：<a href=https://www.bootcss.com/ target=_blank>姜飞祥</a></span> &bull;
+                                <time class=post-date datetime="July 28, 2016 11:29 AM" title="July 28, 2016 11:29 AM">2016年07月28日</time>
+                            </div>
+                        </div>
+                        <div class=featured-media><a href=/post/laracon-laravel-5-3-recap/>
+                            <img src=http://image.golaravel.com/5/1a/d0b8c085dec30605e2c3e9e773d00.png alt="图片显示异常">
+                        </a>
+                        </div>
+                        <div class=post-content>
+                            <p></p>
+                            <p class="des"></p>
+                            <p></p>
+                        </div>
+                        <div class=post-permalink><a id="infofull_btn" class="btn btn-default">阅读全文</a>
+                        </div>
+                        <footer class="post-footer clearfix"></footer>-->
+                    </article>
+                    <!--显示分页信息 -->
+                    <article class=post>
+                        <!--分页文字信息 -->
+                        <div class="col-md-6 col-sm-6" id="page_info_area">
+                            当前第页，总共页，总共条记录
+                        </div>
+                        <!--分页导航条信息 -->
+                        <div class="col-md-6 col-sm-6" id="page_nav_area">
+
+                        </div>
+                    </article>
+                </main>
+                <aside class="col-md-4 sidebar">
+                    <div class=widget>
+                        <h4 class=title>个人信息</h4>
+                        <div class="content community">
+                            <p>姜飞祥</p>
+                            <p><a href=http://wenda.golaravel.com/ title=Laravel中文网问答社区 target=_blank onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i> 问答社区</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class=widget>
+                        <h4 class=title>社区</h4>
+                        <div class="content community">
+                            <p>QQ群：462694081</p>
+                            <p><a href=http://wenda.golaravel.com/ title=Laravel中文网问答社区 target=_blank onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '问答社区'])"><i class="fa fa-comments"></i> 问答社区</a>
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <footer class=main-footer>
+        <div class=container>
+            <div class=row>
+                <div class=col-sm-4>
+                    <div class=widget>
+                        <h4 class=title>最新文章</h4>
+                        <div class="content recent-post">
+                            <div class=recent-single-post><a href=/post/laravel-5-5-will-be-the-next-lts-release/ class=post-title>Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布</a>
+                                <div class=date>2017年02月20日</div>
+                            </div>
+                            <div class=recent-single-post><a href=/post/laravel-5-4-is-now-released/ class=post-title>Laravel 5.4 版本正式发布</a>
+                                <div class=date>2017年01月24日</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=col-sm-4>
+                    <div class=widget>
+                        <h4 class=title>标签云</h4>
+                        <div class="content tag-cloud"><a href=/tag-cloud/>...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class=col-sm-4>
+                    <div class=widget>
+                        <h4 class=title>友链</h4>
+                        <div class="content tag-cloud friend-links">
+                            <a href=http://www.bootcss.com title="Bootstrap 中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'bootcsscom'])" target=_blank>Bootstrap中文网</a>
+                            <a href=https://www.webpackjs.com title="Webpack 中文网" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'webpackjscom'])"
+                               target=_blank>Webpack中文网</a>
+                            <a href=https://www.nodeapp.cn title="Node.js 中文文档" onclick="_hmt.push(['_trackEvent', 'link', 'click', 'nodeappcn'])" target=_blank>Node.js中文文档</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class=copyright>
+        <div class=container>
+            <div class=row>
+                <div class=col-sm-12><span>Copyright &copy; <a href=http://www.golaravel.com/ >Laravel 中文网</a></span> | <span><a href=http://www.miibeian.gov.cn/ target=_blank>京ICP备11008151号</a></span> | <span>京公网安备11010802014853</span>
+                </div>
+            </div>
+        </div>
+    </div><a href=# id=back-to-top><i class="fa fa-angle-up"></i></a>
+    <script src="https://cdn.bootcss.com/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
+</body>
+</html>

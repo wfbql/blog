@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jiangfx.mapper.AdminMapper">
+
+	<!-- 查询,根据用户名和密码查询 -->
+	<select id="getByUsernameAndPassword" resultType="Admin">
+		select * from admin WHERE username=#{username} and password=#{password}
+	</select>
+
+	<!--根据用户名查询-->
+	<select id="getByUsername" parameterType="String" resultType="Admin">
+		select * from admin where username=#{username}
+	</select>
+
+</mapper>

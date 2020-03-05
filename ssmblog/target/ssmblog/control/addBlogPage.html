@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写博客</title>
+    <script type="text/javascript" src="/control/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/addBlog.js"></script>
+</head>
+<body>
+    <table cellspacing="20px" id="addBlog_table">
+        <tr>
+            <td width="80px">博客标题：</td>
+            <td><input type="text" id="title" style="width:400px" /></td>
+        </tr>
+        <tr>
+            <td width="80px">博客简介：</td>
+            <td><input type="text" id="des" style="width:400px" /></td>
+        </tr>
+       <!-- <tr>
+            <td>所属类别：</td>
+            <td>
+                <select id="blogTypeId"  style="width:154px">
+                    <option value="">请选择博客类别</option>
+                    <option value="1">请选择博客类别</option>
+                    <option value="2">请选择博客类别</option>
+                </select>
+            </td>
+        </tr>-->
+        <tr>
+            <td valign="top">博客内容：</td>
+            <td>
+                <div id="editor">
+                    <p>开始你的创作...</p>
+                </div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button class="btn btn-success" id="addBlog_btn" style="width:120px;" >发布</button></td>
+        </tr>
+    </table>
+
+
+
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script type="text/javascript" src="/static/wangEditor/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    editor.create()
+</script>
+</body>
+</html>
